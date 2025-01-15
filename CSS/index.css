@@ -1,0 +1,44 @@
+body {
+    background-color: lightyellow;
+    color: blue;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px; 
+}
+
+#about {
+    margin-bottom: 30px; 
+}
+
+#experience {
+    margin-bottom: 30px; 
+}
+
+#connect {
+    margin-bottom: 30px; 
+}
+
+* Styling for h1 and h2 */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text; /* this for compatibility */
+    color: transparent;
+}
