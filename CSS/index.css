@@ -81,11 +81,12 @@ a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 2em;
+    padding: 1em 0;
+    background: #222;
+    color: #fff;
+    font-size: 0.875rem;
 }
 
 /* Responsive Design */
@@ -123,4 +124,49 @@ footer {
     ul li {
         font-size: 1.2rem;
     }
+}
+
+/* Skills Section */
+#skills {
+    margin: 20px auto;  /* Aligns with other sections */
+    padding: 20px;
+    width: 100%;  /* Ensure it takes full width */
+    max-width: 920px;  /* Slightly smaller width */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Skills List Container (Ensures Alignment) */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Skills List */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+/* Each Skill Box */
+#skills ul li {
+    background: #f0f0f0; /* Keeps the grey box */
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
 }
