@@ -128,17 +128,17 @@ footer {
 
 /* Skills Section */
 #skills {
-    margin: 20px auto;  /* Aligns with other sections */
+    margin: 20px auto;      
     padding: 20px;
-    width: 100%;  /* Ensure it takes full width */
-    max-width: 920px;  /* Slightly smaller width */
+    width: 100%;    
+    max-width: 920px;   
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Skills List Container (Ensures Alignment) */
+/* Skills List Container  */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -161,7 +161,7 @@ footer {
 
 /* Each Skill Box */
 #skills ul li {
-    background: #f0f0f0; /* Keeps the grey box */
+    background: #f0f0f0; 
     padding: 0.75em 1.5em;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
