@@ -27,3 +27,37 @@ skills.forEach(function(skill) {
     skillItem.textContent = skill;  // Set the text content to the current skill from the array
     skillsList.appendChild(skillItem);  // Append the <li> to the <ul>
 });
+
+// 1. Get the repositories in GitHub
+fetch("https://api.github.com/users/canellecode/repos") 
+  .then(response => response.json())  // Convert the response into JSON
+  .then(data => {  
+    console.log(data); // Log the repositories in the console 
+
+    // Create the section for projects
+    let projectSection = document.createElement("section");
+    projectSection.id = "projects";
+    
+    let projectHeading = document.createElement("h2");
+    projectHeading.textContent = "My GitHub Repositories";
+    projectSection.appendChild(projectHeading);
+    
+    let projectList = document.createElement("ul");
+    
+    // Loop through the repositories and create links
+    data.forEach(repo => {
+        let repoItem = document.createElement("li");
+        let repoLink = document.createElement("a");
+        
+        repoLink.href = repo.html_url; // Link to the repo
+        repoLink.textContent = repo.name; // Name of the repo
+        repoLink.target = "_blank"; // Open in a new tab
+        
+        repoItem.appendChild(repoLink);
+        projectList.appendChild(repoItem);
+    });
+
+    projectSection.appendChild(projectList);
+    document.body.appendChild(projectSection); // Add to the HTML page
+  })
+  .catch(error => console.error("Error:", error)); // Handle errors
