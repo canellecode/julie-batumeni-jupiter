@@ -1,29 +1,39 @@
-// 1. Add Footer with Copyright
-let today = new Date();  // Create a Date object to get the current date
-let thisYear = today.getFullYear();  // Get the current year dynamically
+// 1️⃣ Add Footer with Copyright
+let today = new Date();
+let thisYear = today.getFullYear();
 
-// Select the footer element in the DOM
 let footer = document.querySelector("footer");
-
-// Create a new paragraph element for the copyright text
 let copyright = document.createElement("p");
-
-// Set the content of the paragraph (including the copyright symbol)
 copyright.innerHTML = `© Julie Batumeni ${thisYear}`;
-
-// Append the new paragraph to the footer
 footer.appendChild(copyright);
 
-// 2. Create Skills List Dynamically
-let skills = ["JavaScript", "HTML", "CSS", "GitHub", "Salesforce", "Project Management"];  // Array of skills
+// 2️⃣ Create Skills List Dynamically
+let skills = ["JavaScript", "HTML", "CSS", "GitHub", "Salesforce", "Project Management"];
 
-// Select the skills section and the unordered list (ul) inside it
-let skillsSection = document.querySelector("#skills");
-let skillsList = skillsSection.querySelector("ul");
+let skillsList = document.getElementById("skillsList");
 
-// Loop through the skills array and create a list item for each skill
-skills.forEach(function(skill) {
-    let skillItem = document.createElement("li");  // Create a new <li> element
-    skillItem.textContent = skill;  // Set the text content to the current skill from the array
-    skillsList.appendChild(skillItem);  // Append the <li> to the <ul>
+skills.forEach(skill => {
+    let skillItem = document.createElement("li");
+    skillItem.textContent = skill;
+    skillsList.appendChild(skillItem);
 });
+
+// 3️⃣ Fetch and Display GitHub Repositories
+fetch("https://api.github.com/users/canellecode/repos")
+    .then(response => response.json())
+    .then(repositories => {
+        let projectList = document.getElementById("projectsList");
+
+        repositories.forEach(repo => {
+            let projectItem = document.createElement("li");
+            let projectLink = document.createElement("a");
+
+            projectLink.href = repo.html_url;
+            projectLink.textContent = repo.name;
+            projectLink.target = "_blank";
+
+            projectItem.appendChild(projectLink);
+            projectList.appendChild(projectItem);
+        });
+    })
+    .catch(error => console.error("Error fetching GitHub projects:", error));
