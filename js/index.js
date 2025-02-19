@@ -39,7 +39,6 @@ fetch("https://api.github.com/users/canellecode/repos")
         projectList.appendChild(fallbackItem);
     });
 
-// 4. Message Form Functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Get references to DOM elements
     const messageForm = document.querySelector('form[name="leave_message"]');
@@ -104,3 +103,4 @@ document.addEventListener('DOMContentLoaded', function() {
         messagesSection.style.display = 'block';
     }
 });
+
