@@ -13,7 +13,6 @@
     <header>
         <h1>Julie Batumeni</h1>
         <p>Welcome to my portfolio, where I share my journey into web development and my professional experience.</p>
-
         <!-- Navigation Menu -->
         <nav>
             <ul class="nav-links">
@@ -26,13 +25,11 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>Hi, my name is Julie! I love going out, traveling, and exploring new cultures and experiences. With a background in finance, I’ve recently discovered a passion for web development, and now I’m building websites just for fun!</p>
+            <p>Hi, my name is Julie! I love going out, traveling, and exploring new cultures and experiences. With a background in finance, I've recently discovered a passion for web development, and now I'm building websites just for fun!</p>
         </section>
-
         <section id="experience">
             <h2>Experience</h2>
             <ul>
@@ -42,21 +39,14 @@
                 <li>Experience with project management tools like JIRA.</li>
             </ul>
         </section>
-
         <section id="skills">
             <h2>Skills</h2>
-            <ul id="skillsList">
-                <!-- Skills will be added dynamically here by JavaScript -->
-            </ul>
+            <ul id="skillsList"></ul>
         </section>
-
         <section id="projects">
             <h2>Projects</h2>
-            <ul id="projectsList">
-                <!-- GitHub projects will be added dynamically here by JavaScript -->
-            </ul>
+            <ul id="projectsList"></ul>
         </section>
-
         <section id="connect">
             <h2>Connect</h2>
             <ul>
@@ -72,31 +62,27 @@
                 </li>
             </ul>
         </section>
+        <section id="message">
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label for="usersName">Your Name:</label>
+                <input type="text" id="usersName" name="usersName" required>
+                
+                <label for="usersEmail">Your Email:</label>
+                <input type="email" id="usersEmail" name="usersEmail" required>
+                
+                <label for="usersMessage">Your Message:</label>
+                <textarea id="usersMessage" name="usersMessage" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages" style="display: none;">
+            <h2>Messages</h2>
+            <ul id="messagesList" class="messages-grid"></ul>
+        </section>
     </main>
-
-    <section id="message">
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
-            <label for="usersName">Your Name:</label>
-            <input type="text" id="usersName" name="usersName" required>
-            <br>
-    
-            <label for="usersEmail">Your Email:</label>
-            <input type="email" id="usersEmail" name="usersEmail" required>
-            <br>
-    
-            <label for="usersMessage">Your Message:</label>
-            <textarea id="usersMessage" name="usersMessage" required></textarea>
-            <br>
-    
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
-    <footer>
-        <!-- Copyright text will be added dynamically here by JavaScript -->
-    </footer>
-
+    <footer></footer>
     <script src="js/index.js"></script>
 </body>
 </html>
